@@ -9,8 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var colorCollection: UICollectionView!
+    
     let colorPicker = UIColorPickerViewController()
     
+    
+    private var colorSwatches = [ColorSwatch]() {
+        didSet {
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,6 +16,7 @@
 		131F270D258815B00007A819 /* ColorSwatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F270C258815B00007A819 /* ColorSwatchesTests.swift */; };
 		131F2718258815B00007A819 /* ColorSwatchesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F2717258815B00007A819 /* ColorSwatchesUITests.swift */; };
 		13BD4BE6258DD21C008AB95E /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */; };
+		13BD4BED258DDFA4008AB95E /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BEC258DDFA3008AB95E /* ColorSwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		131F2717258815B00007A819 /* ColorSwatchesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchesUITests.swift; sourceTree = "<group>"; };
 		131F2719258815B00007A819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		13BD4BEC258DDFA3008AB95E /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				131F26F5258815AF0007A819 /* AppDelegate.swift */,
 				131F26F7258815AF0007A819 /* SceneDelegate.swift */,
+				13BD4BEC258DDFA3008AB95E /* ColorSwatch.swift */,
 				131F26F9258815AF0007A819 /* ViewController.swift */,
 				13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */,
 				131F26FB258815AF0007A819 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				131F26F6258815AF0007A819 /* AppDelegate.swift in Sources */,
 				13BD4BE6258DD21C008AB95E /* ColorPickerViewController.swift in Sources */,
 				131F26F8258815AF0007A819 /* SceneDelegate.swift in Sources */,
+				13BD4BED258DDFA4008AB95E /* ColorSwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
