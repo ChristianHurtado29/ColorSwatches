@@ -14,7 +14,7 @@ class ColorCVC: UICollectionViewCell {
     
     func configureCell(_ color: ColorSwatch) {
         colorName.text = color.colorName
-        self.backgroundColor = color.color
+//        self.backgroundColor = color.color
     }
     
 }

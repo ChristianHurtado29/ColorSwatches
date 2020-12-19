@@ -16,3 +16,13 @@ extension UIViewController {
     present(alertController, animated: true, completion: nil)
   }
 }
+
+extension FileManager {
+    static func getDocumentsDirectory() -> URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+    
+    static func pathToDocumentsDirectory(with filename: String) -> URL {
+        return getDocumentsDirectory().appendingPathComponent(filename)
+    }
+}

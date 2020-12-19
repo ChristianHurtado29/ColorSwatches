@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ColorSwatch {
+struct ColorSwatch: Codable {
     let colorName: String
-    let color: UIColor
+//    let color: UIColor
 }

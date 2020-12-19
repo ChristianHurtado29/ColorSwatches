@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		13BD4BED258DDFA4008AB95E /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BEC258DDFA3008AB95E /* ColorSwatch.swift */; };
 		13BD4BF2258DE11C008AB95E /* ColorCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BF1258DE11C008AB95E /* ColorCVC.swift */; };
 		13BD4BF7258DE43D008AB95E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BF6258DE43D008AB95E /* Extension.swift */; };
+		13BD4C10258DFBE2008AB95E /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */; };
+		13BD4C16258DFE3F008AB95E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13BD4C15258DFE3F008AB95E /* ImageKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		13BD4BEC258DDFA3008AB95E /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		13BD4BF1258DE11C008AB95E /* ColorCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCVC.swift; sourceTree = "<group>"; };
 		13BD4BF6258DE43D008AB95E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BD4C16258DFE3F008AB95E /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 				13BD4C04258DE75E008AB95E /* Cells */,
 				131F26FB258815AF0007A819 /* Main.storyboard */,
 				13BD4BF6258DE43D008AB95E /* Extension.swift */,
+				13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */,
 				131F26FE258815B00007A819 /* Assets.xcassets */,
 				131F2700258815B00007A819 /* LaunchScreen.storyboard */,
 				131F2703258815B00007A819 /* Info.plist */,
@@ -180,6 +185,9 @@
 			dependencies = (
 			);
 			name = ColorSwatches;
+			packageProductDependencies = (
+				13BD4C15258DFE3F008AB95E /* ImageKit */,
+			);
 			productName = ColorSwatches;
 			productReference = 131F26F2258815AF0007A819 /* ColorSwatches.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 131F26E9258815AF0007A819;
+			packageReferences = (
+				13BD4C14258DFE3F008AB95E /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = 131F26F3258815AF0007A819 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +312,7 @@
 				131F26F8258815AF0007A819 /* SceneDelegate.swift in Sources */,
 				13BD4BF2258DE11C008AB95E /* ColorCVC.swift in Sources */,
 				13BD4BED258DDFA4008AB95E /* ColorSwatch.swift in Sources */,
+				13BD4C10258DFBE2008AB95E /* PersistenceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +645,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13BD4C14258DFE3F008AB95E /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13BD4C15258DFE3F008AB95E /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13BD4C14258DFE3F008AB95E /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 131F26EA258815AF0007A819 /* Project object */;
 }

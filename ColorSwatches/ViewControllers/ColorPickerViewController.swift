@@ -24,10 +24,10 @@ class ColorPickerViewController: UIViewController {
     }
     
     @IBAction func createSwatch(_ sender: UIButton) {
-        let newColorSwatch = ColorSwatch(colorName: colorLabel.text ?? "", color: colorView.backgroundColor!)
-        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "saved swatch!", preferredStyle: .alert)
-        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-        present(showAlert, animated: true)
+//        let newColorSwatch = ColorSwatch(colorName: colorLabel.text ?? "", color: colorView.backgroundColor!)
+//        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "saved swatch!", preferredStyle: .alert)
+//        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+//        present(showAlert, animated: true)
     }
     
     @IBAction func colorPicker(_ sender: UIButton) {
