@@ -15,6 +15,7 @@
 		131F2702258815B00007A819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131F2700258815B00007A819 /* LaunchScreen.storyboard */; };
 		131F270D258815B00007A819 /* ColorSwatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F270C258815B00007A819 /* ColorSwatchesTests.swift */; };
 		131F2718258815B00007A819 /* ColorSwatchesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F2717258815B00007A819 /* ColorSwatchesUITests.swift */; };
+		13BD4BE6258DD21C008AB95E /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		131F2713258815B00007A819 /* ColorSwatchesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorSwatchesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		131F2717258815B00007A819 /* ColorSwatchesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchesUITests.swift; sourceTree = "<group>"; };
 		131F2719258815B00007A819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				131F26F5258815AF0007A819 /* AppDelegate.swift */,
 				131F26F7258815AF0007A819 /* SceneDelegate.swift */,
 				131F26F9258815AF0007A819 /* ViewController.swift */,
+				13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */,
 				131F26FB258815AF0007A819 /* Main.storyboard */,
 				131F26FE258815B00007A819 /* Assets.xcassets */,
 				131F2700258815B00007A819 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				131F26FA258815AF0007A819 /* ViewController.swift in Sources */,
 				131F26F6258815AF0007A819 /* AppDelegate.swift in Sources */,
+				13BD4BE6258DD21C008AB95E /* ColorPickerViewController.swift in Sources */,
 				131F26F8258815AF0007A819 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

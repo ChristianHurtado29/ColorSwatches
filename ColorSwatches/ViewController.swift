@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addColor(_ sender: UIBarButtonItem) {
+    @IBAction func colorPickerButton(_ sender: UIBarButtonItem) {
+        
         present(colorPicker, animated: true)
     }
     

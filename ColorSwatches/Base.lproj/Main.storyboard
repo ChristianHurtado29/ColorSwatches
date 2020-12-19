@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAp-8q-fFr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAp-8q-fFr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" title="Color Swatches" id="9tH-QU-7PF">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3sG-nS-rga">
                             <connections>
-                                <action selector="addColor:" destination="BYZ-38-t0r" id="dKE-Ea-vyP"/>
+                                <segue destination="1XS-XW-VTd" kind="presentation" id="OQu-wQ-PKs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -29,6 +29,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
+        </scene>
+        <!--Color Picker View Controller-->
+        <scene sceneID="cO1-GN-Ltr">
+            <objects>
+                <viewController id="1XS-XW-VTd" customClass="ColorPickerViewController" customModule="ColorSwatches" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vya-Qy-qLx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-ii-ZE8">
+                                <rect key="frame" x="20" y="20" width="266" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD1-t2-x8W">
+                                <rect key="frame" x="294" y="20" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="I6P-JJ-OT5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Create Swatch"/>
+                                <connections>
+                                    <action selector="createSwatch:" destination="1XS-XW-VTd" eventType="touchUpInside" id="3Oz-KV-hme"/>
+                                    <action selector="createSwatch:" destination="aue-41-UgG" eventType="touchUpInside" id="WxY-9U-RXK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SO7-cO-fd4">
+                                <rect key="frame" x="20" y="62" width="374" height="595"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="595" id="pLB-lx-tYo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-96-gre">
+                                <rect key="frame" x="177" y="687" width="60" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="ecG-IH-nsQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="square.and.arrow.up.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="colorPicker:" destination="1XS-XW-VTd" eventType="touchUpInside" id="7YV-Ke-dnO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I5h-2g-t1S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I5h-2g-t1S" firstAttribute="trailing" secondItem="SO7-cO-fd4" secondAttribute="trailing" constant="20" id="5NV-Jr-yHj"/>
+                            <constraint firstItem="I5h-2g-t1S" firstAttribute="trailing" secondItem="OD1-t2-x8W" secondAttribute="trailing" constant="20" id="GkX-bP-bAR"/>
+                            <constraint firstItem="OD1-t2-x8W" firstAttribute="top" secondItem="I5h-2g-t1S" secondAttribute="top" constant="20" id="KRe-Ot-1fl"/>
+                            <constraint firstItem="OD1-t2-x8W" firstAttribute="leading" secondItem="GL4-ii-ZE8" secondAttribute="trailing" constant="8" symbolic="YES" id="OyX-f7-wga"/>
+                            <constraint firstItem="GL4-ii-ZE8" firstAttribute="top" secondItem="I5h-2g-t1S" secondAttribute="top" constant="20" id="R6J-es-eIf"/>
+                            <constraint firstItem="GL4-ii-ZE8" firstAttribute="leading" secondItem="I5h-2g-t1S" secondAttribute="leading" constant="20" id="XWW-O9-rju"/>
+                            <constraint firstItem="O6j-96-gre" firstAttribute="leading" secondItem="I5h-2g-t1S" secondAttribute="leading" constant="177" id="dIh-7f-fOO"/>
+                            <constraint firstItem="I5h-2g-t1S" firstAttribute="trailing" secondItem="O6j-96-gre" secondAttribute="trailing" constant="177" id="di9-qO-MRf"/>
+                            <constraint firstItem="SO7-cO-fd4" firstAttribute="top" secondItem="GL4-ii-ZE8" secondAttribute="bottom" constant="8" symbolic="YES" id="tdf-lK-pRg"/>
+                            <constraint firstItem="SO7-cO-fd4" firstAttribute="leading" secondItem="I5h-2g-t1S" secondAttribute="leading" constant="20" id="wEu-DF-ba7"/>
+                            <constraint firstItem="O6j-96-gre" firstAttribute="top" secondItem="SO7-cO-fd4" secondAttribute="bottom" constant="30" id="xeH-UL-YNO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorNameText" destination="GL4-ii-ZE8" id="cGv-h0-pdv"/>
+                        <outlet property="colorView" destination="SO7-cO-fd4" id="MZj-Ng-9ch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n96-kY-5V8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aue-41-UgG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f5c-Su-4at">
@@ -51,8 +123,15 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
