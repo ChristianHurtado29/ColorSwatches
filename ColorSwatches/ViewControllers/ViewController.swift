@@ -53,6 +53,16 @@ class ViewController: UIViewController {
         present(colorPicker, animated: true)
     }
     
+    func deletingSwatch(indexPath: IndexPath) {
+        do {
+            try dataPersistence.delete(swatch: indexPath.row)
+            colorSwatches.remove(at: indexPath.row)
+        } catch {
+            print("could not delete swatch: \(error.localizedDescription)")
+        }
+        dismiss(animated: true)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -65,6 +75,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
             fatalError("could not dequeu color cell")
         }
         let color = colorSwatches[indexPath.row]
+        cell.delegate = self as ColorCellDel
         cell.configureCell(color)
         return cell
     }
@@ -81,4 +92,24 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
       return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
+}
+
+extension ViewController: ColorCellDel {
+    func alertAction(_ swatchCell: ColorCVC) {
+        guard let indexPath = colorCollection.indexPath(for: swatchCell) else {
+            return
+        }
+        
+        let showAlert = UIAlertController(title: "Actions", message: "Which would you like to do?", preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] alertAction in
+            self?.deletingSwatch(indexPath: indexPath)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        showAlert.addAction(deleteAction)
+        showAlert.addAction(cancelAction)
+        present(showAlert, animated: true)
+        
+    }
+    
+    
 }
