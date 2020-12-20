@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol ColorDelegate: AnyObject{
-    func colorTake(colorSwatch: ColorSwatch)
-}
+//protocol ColorDelegate: AnyObject{
+//    func colorTake(colorSwatch: ColorSwatch)
+//}
 
 class ColorPickerViewController: UIViewController {
     
     let colorPickerView = UIColorPickerViewController()
     let colorWell = UIColorWell()
     
-    weak var delegate: ColorDelegate?
+//    weak var delegate: ColorDelegate?
     
     @IBOutlet weak var colorNameText: UITextField!
     @IBOutlet weak var colorView: UIView!
@@ -40,7 +40,7 @@ class ColorPickerViewController: UIViewController {
     
     @IBAction func createSwatch(_ sender: UIButton) {
         let newColorSwatch = ColorSwatch(colorName: colorLabel.text!, red: Double(red), green: Double(green), blue: Double(blue), alpha: Double(alpha))
-        delegate?.colorTake(colorSwatch: newColorSwatch)
+//        delegate?.colorTake(colorSwatch: newColorSwatch)
         colorSwatches.insert(newColorSwatch, at: 0)
         
         do {
