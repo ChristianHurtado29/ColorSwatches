@@ -12,8 +12,8 @@ class ColorCVC: UICollectionViewCell {
     @IBOutlet weak var colorName: UILabel!
     
     
-    func configureCell(_ color: ColorSwatch) {
-        colorName.text = color.colorName
+    func configureCell(_ color: ColorSwatch?) {
+        colorName.text = color?.colorName ?? ""
 //        self.backgroundColor = color.color
     }
     

@@ -48,6 +48,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="400" height="252"/>
+                                        <connections>
+                                            <outlet property="colorName" destination="8A0-6S-fZL" id="aFy-4R-RQB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

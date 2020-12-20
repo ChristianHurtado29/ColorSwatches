@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import DataPersistence
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var colorCollection: UICollectionView!
     
     let colorPicker = UIColorPickerViewController()
-    
+    private let dataPersistence = PersistenceHelper(filename: "swatches.plist")
+//    let colorSwatches = [ColorSwatch]()
     
     private var colorSwatches = [ColorSwatch]() {
         didSet {
@@ -23,7 +25,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorCollection.dataSource = self
+        loadColors()
 //        colorCollection.delegate = self
+    }
+    
+    private func loadColors() {
+        do{
+            colorSwatches = try dataPersistence.loadEvents()
+            print(colorSwatches.count)
+        } catch {
+            print("loading events error: \(error)")
+        }
     }
     
     @IBAction func colorPickerButton(_ sender: UIBarButtonItem) {

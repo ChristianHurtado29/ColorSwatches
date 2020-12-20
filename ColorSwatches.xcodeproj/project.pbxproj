@@ -117,8 +117,7 @@
 				13BD4C00258DE754008AB95E /* ViewControllers */,
 				13BD4C04258DE75E008AB95E /* Cells */,
 				131F26FB258815AF0007A819 /* Main.storyboard */,
-				13BD4BF6258DE43D008AB95E /* Extension.swift */,
-				13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */,
+				13BD4C1A258E01F3008AB95E /* Extensions */,
 				131F26FE258815B00007A819 /* Assets.xcassets */,
 				131F2700258815B00007A819 /* LaunchScreen.storyboard */,
 				131F2703258815B00007A819 /* Info.plist */,
@@ -167,6 +166,15 @@
 				13BD4BF1258DE11C008AB95E /* ColorCVC.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		13BD4C1A258E01F3008AB95E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13BD4BF6258DE43D008AB95E /* Extension.swift */,
+				13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

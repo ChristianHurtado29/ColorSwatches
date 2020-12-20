@@ -10,5 +10,8 @@ import UIKit
 
 struct ColorSwatch: Codable {
     let colorName: String
+    let red: Double
+    let green: Double
+    let blue: Double
 //    let color: UIColor
 }
