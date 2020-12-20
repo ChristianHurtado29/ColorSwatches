@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorCollection.dataSource = self
         loadColors()
-//        colorCollection.delegate = self
+        colorCollection.delegate = self
     }
     
     private func loadColors() {
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colorSwatches.count
     }
@@ -58,6 +58,20 @@ extension ViewController: UICollectionViewDataSource {
         cell.configureCell(color)
         return cell
     }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let maxSize: CGSize = UIScreen.main.bounds.size
+        let spacingBetweenItems: CGFloat = 5
+        let numberOfItems: CGFloat = 2
+        let totalSpacing: CGFloat = (3 * spacingBetweenItems) + (numberOfItems - 1) * spacingBetweenItems
+        let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
+        let itemHeight: CGFloat = maxSize.height * 0.20
+        return  CGSize(width: itemWidth, height: itemHeight)
+    }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+      return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 10)
+    }
 }
