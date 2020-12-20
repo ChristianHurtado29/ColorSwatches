@@ -66,8 +66,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let spacingBetweenItems: CGFloat = 5
         let numberOfItems: CGFloat = 2
         let totalSpacing: CGFloat = (3 * spacingBetweenItems) + (numberOfItems - 1) * spacingBetweenItems
-        let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
-        let itemHeight: CGFloat = maxSize.height * 0.20
+        let itemWidth: CGFloat = maxSize.width
+        let itemHeight: CGFloat = maxSize.height * 0.25
         return  CGSize(width: itemWidth, height: itemHeight)
     }
     
