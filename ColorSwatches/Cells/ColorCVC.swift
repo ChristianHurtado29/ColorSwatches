@@ -16,7 +16,6 @@ class ColorCVC: UICollectionViewCell {
         self.layer.cornerRadius = 70
         colorName.text = color?.colorName ?? ""
         colorView.backgroundColor = UIColor(red: CGFloat(color!.red), green: CGFloat(color!.green), blue: CGFloat(color!.blue), alpha: CGFloat(color?.alpha ?? 1.0))
-//        self.backgroundColor = UIColor(red: CGFloat(color!.red), green: CGFloat(color!.green), blue: CGFloat(color!.blue), alpha: 1)
     }
     
 }

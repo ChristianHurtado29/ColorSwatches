@@ -21,6 +21,7 @@
 		13BD4BF7258DE43D008AB95E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4BF6258DE43D008AB95E /* Extension.swift */; };
 		13BD4C10258DFBE2008AB95E /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */; };
 		13BD4C16258DFE3F008AB95E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13BD4C15258DFE3F008AB95E /* ImageKit */; };
+		13CBAE11258F373F00F356FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CBAE10258F373F00F356FF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		13BD4BF1258DE11C008AB95E /* ColorCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCVC.swift; sourceTree = "<group>"; };
 		13BD4BF6258DE43D008AB95E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		13BD4C0F258DFBE2008AB95E /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		13CBAE10258F373F00F356FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				131F26F9258815AF0007A819 /* ViewController.swift */,
+				13CBAE10258F373F00F356FF /* DetailViewController.swift */,
 				13BD4BE5258DD21C008AB95E /* ColorPickerViewController.swift */,
 			);
 			path = ViewControllers;
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CBAE11258F373F00F356FF /* DetailViewController.swift in Sources */,
 				131F26FA258815AF0007A819 /* ViewController.swift in Sources */,
 				131F26F6258815AF0007A819 /* AppDelegate.swift in Sources */,
 				13BD4BF7258DE43D008AB95E /* Extension.swift in Sources */,

@@ -59,6 +59,7 @@
                                         <connections>
                                             <outlet property="colorName" destination="8A0-6S-fZL" id="aFy-4R-RQB"/>
                                             <outlet property="colorView" destination="zGj-8Q-lc1" id="fK6-jI-SaL"/>
+                                            <segue destination="tZV-kz-Jf4" kind="show" id="wb6-qI-Eq9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +88,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="aNm-Df-Pyu">
+            <objects>
+                <viewController id="tZV-kz-Jf4" customClass="DetailViewController" customModule="ColorSwatches" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cS3-UO-ngL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkw-Uh-dql">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvw-4e-oHn">
+                                        <rect key="frame" x="8" y="130" width="398" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkv-E0-EWf">
+                                        <rect key="frame" x="8" y="175" width="398" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-ys-pye">
+                                        <rect key="frame" x="8" y="220" width="398" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qvw-4e-oHn" firstAttribute="top" secondItem="Xkw-Uh-dql" secondAttribute="top" constant="130" id="L79-sG-DPk"/>
+                                    <constraint firstItem="YVh-ys-pye" firstAttribute="leading" secondItem="Xkw-Uh-dql" secondAttribute="leading" constant="8" id="Ptz-bc-NkW"/>
+                                    <constraint firstAttribute="trailing" secondItem="nkv-E0-EWf" secondAttribute="trailing" constant="8" id="cT9-6D-9IF"/>
+                                    <constraint firstItem="nkv-E0-EWf" firstAttribute="leading" secondItem="Xkw-Uh-dql" secondAttribute="leading" constant="8" id="kZt-Ov-bd3"/>
+                                    <constraint firstItem="qvw-4e-oHn" firstAttribute="leading" secondItem="Xkw-Uh-dql" secondAttribute="leading" constant="8" id="koL-Tk-UjP"/>
+                                    <constraint firstItem="nkv-E0-EWf" firstAttribute="top" secondItem="qvw-4e-oHn" secondAttribute="bottom" constant="8" symbolic="YES" id="rIj-Hd-37R"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVh-ys-pye" secondAttribute="trailing" constant="8" id="sch-Rr-l2N"/>
+                                    <constraint firstItem="YVh-ys-pye" firstAttribute="top" secondItem="nkv-E0-EWf" secondAttribute="bottom" constant="8" symbolic="YES" id="vbO-Qb-mnL"/>
+                                    <constraint firstAttribute="trailing" secondItem="qvw-4e-oHn" secondAttribute="trailing" constant="8" id="wcC-XL-lOd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="seh-27-DL4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xkw-Uh-dql" firstAttribute="top" secondItem="seh-27-DL4" secondAttribute="top" id="3db-DP-H0h"/>
+                            <constraint firstItem="Xkw-Uh-dql" firstAttribute="leading" secondItem="seh-27-DL4" secondAttribute="leading" id="djc-iw-bck"/>
+                            <constraint firstItem="Xkw-Uh-dql" firstAttribute="trailing" secondItem="seh-27-DL4" secondAttribute="trailing" id="htK-GG-Dcy"/>
+                            <constraint firstItem="Xkw-Uh-dql" firstAttribute="bottom" secondItem="seh-27-DL4" secondAttribute="bottom" id="w1V-L9-klo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HUs-Tx-K8I"/>
+                    <connections>
+                        <outlet property="blueLabel" destination="YVh-ys-pye" id="Zh5-g2-Z3x"/>
+                        <outlet property="colorView" destination="Xkw-Uh-dql" id="DmD-dD-DyU"/>
+                        <outlet property="greenLabel" destination="nkv-E0-EWf" id="Jzj-ii-wTs"/>
+                        <outlet property="redLabel" destination="qvw-4e-oHn" id="kod-ok-Emc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgD-AX-cnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="383.70535714285711"/>
         </scene>
         <!--Color Picker View Controller-->
         <scene sceneID="cO1-GN-Ltr">
@@ -171,7 +237,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n96-kY-5V8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="aue-41-UgG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1906" y="-378"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f5c-Su-4at">

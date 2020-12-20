@@ -32,7 +32,16 @@ class ViewController: UIViewController {
         loadColors()
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = colorCollection.indexPathsForSelectedItems else {
+            fatalError("could not dequeue swatch color")
+        }
+        print(indexPath)
+        let sel = indexPath
+        detailVC.colorSwatch = colorSwatches[1]
+    }
+    
     private func loadColors() {
         do{
             colorSwatches = try dataPersistence.loadEvents()
@@ -43,7 +52,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func colorPickerButton(_ sender: UIBarButtonItem) {
-        
         present(colorPicker, animated: true)
     }
     
