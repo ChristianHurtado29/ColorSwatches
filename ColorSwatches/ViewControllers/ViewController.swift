@@ -14,21 +14,25 @@ class ViewController: UIViewController {
     
     let colorPicker = UIColorPickerViewController()
     private let dataPersistence = PersistenceHelper(filename: "swatches.plist")
-//    let colorSwatches = [ColorSwatch]()
     
     private var colorSwatches = [ColorSwatch]() {
         didSet {
             self.colorCollection.reloadData()
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadColors()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         colorCollection.dataSource = self
-        loadColors()
         colorCollection.delegate = self
+        loadColors()
     }
     
+
     private func loadColors() {
         do{
             colorSwatches = try dataPersistence.loadEvents()
@@ -63,11 +67,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let maxSize: CGSize = UIScreen.main.bounds.size
-        let spacingBetweenItems: CGFloat = 5
-        let numberOfItems: CGFloat = 2
-        let totalSpacing: CGFloat = (3 * spacingBetweenItems) + (numberOfItems - 1) * spacingBetweenItems
         let itemWidth: CGFloat = maxSize.width
-        let itemHeight: CGFloat = maxSize.height * 0.25
+        let itemHeight: CGFloat = maxSize.height * 0.275
         return  CGSize(width: itemWidth, height: itemHeight)
     }
     

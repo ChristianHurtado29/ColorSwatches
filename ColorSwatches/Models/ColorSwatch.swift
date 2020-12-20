@@ -13,5 +13,6 @@ struct ColorSwatch: Codable {
     let red: Double
     let green: Double
     let blue: Double
+    let alpha: Double?
 //    let color: UIColor
 }

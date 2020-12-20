@@ -9,14 +9,12 @@ import UIKit
 
 protocol ColorDelegate: AnyObject{
     func colorTake(colorSwatch: ColorSwatch)
-    
 }
 
 class ColorPickerViewController: UIViewController {
     
     let colorPickerView = UIColorPickerViewController()
     let colorWell = UIColorWell()
-    public var indexPath: Int?
     
     weak var delegate: ColorDelegate?
     
@@ -41,20 +39,21 @@ class ColorPickerViewController: UIViewController {
     }
     
     @IBAction func createSwatch(_ sender: UIButton) {
-        let newColorSwatch = ColorSwatch(colorName: colorLabel.text!, red: Double(red), green: Double(green), blue: Double(blue))
+        let newColorSwatch = ColorSwatch(colorName: colorLabel.text!, red: Double(red), green: Double(green), blue: Double(blue), alpha: Double(alpha))
         delegate?.colorTake(colorSwatch: newColorSwatch)
         colorSwatches.insert(newColorSwatch, at: 0)
         
         do {
             try dataPersistence.create(item: newColorSwatch, indexPath: 0)
             print("created swatch")
+            dismiss(animated: true)
         } catch {
             print("saving error \(error)")
         }
-        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "saved swatch!", preferredStyle: .alert)
-        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-        present(showAlert, animated: true)
-        self.dismiss(animated: true)
+//        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "Saved swatch!", preferredStyle: .alert)
+//        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+//        present(showAlert, animated: true)
+        
     }
     
     @IBAction func colorPicker(_ sender: UIButton) {
@@ -69,6 +68,8 @@ extension ColorPickerViewController: UIColorPickerViewControllerDelegate {
         red = selectedColor.cgColor.components![0]
         green = selectedColor.cgColor.components![1]
         blue = selectedColor.cgColor.components![2]
+        alpha = selectedColor.cgColor.alpha
+        
         colorView.backgroundColor = selectedColor
     }
     
