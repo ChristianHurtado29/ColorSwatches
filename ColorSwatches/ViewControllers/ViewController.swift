@@ -34,12 +34,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let detailVC = segue.destination as? DetailViewController, let indexPath = colorCollection.indexPathsForSelectedItems else {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = colorCollection.indexPathsForSelectedItems?.first else {
             fatalError("could not dequeue swatch color")
         }
-        print(indexPath)
-        let sel = indexPath
-        detailVC.colorSwatch = colorSwatches[1]
+        detailVC.colorSwatch = colorSwatches[indexPath.row]
     }
     
     private func loadColors() {
