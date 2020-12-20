@@ -51,9 +51,10 @@ class ColorPickerViewController: UIViewController {
         } catch {
             print("saving error \(error)")
         }
-//        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "saved swatch!", preferredStyle: .alert)
-//        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-//        present(showAlert, animated: true)
+        let showAlert = UIAlertController(title: "Color: \(newColorSwatch.colorName) saved", message: "saved swatch!", preferredStyle: .alert)
+        showAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(showAlert, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func colorPicker(_ sender: UIButton) {
