@@ -20,16 +20,16 @@ class ViewController: UIViewController {
             self.colorCollection.reloadData()
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        loadColors()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         colorCollection.dataSource = self
         colorCollection.delegate = self
         loadColors()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        colorCollection.reloadData()
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,6 +81,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     }
 }
 
+extension ViewController: ColorDelegate {
+    func colorTake(colorSwatch: ColorSwatch) {
+        colorSwatches.append(colorSwatch)
+    }
+}
+
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let maxSize: CGSize = UIScreen.main.bounds.size
@@ -110,6 +116,4 @@ extension ViewController: ColorCellDel {
         present(showAlert, animated: true)
         
     }
-    
-    
 }

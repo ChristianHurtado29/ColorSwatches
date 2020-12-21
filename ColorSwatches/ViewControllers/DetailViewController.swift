@@ -23,9 +23,6 @@ class DetailViewController: UIViewController {
         greenLabel.text = "Green value: \(colorSwatch?.green.description ?? "")"
         blueLabel.text = "Blue value: \(colorSwatch?.blue.description ?? "")"
         colorView.backgroundColor = UIColor(red: CGFloat(colorSwatch?.red ?? 0.0), green: CGFloat(colorSwatch?.green ?? 0.0), blue: CGFloat(colorSwatch?.blue ?? 0.0), alpha: CGFloat(colorSwatch?.alpha ?? 1.0))
-        print(colorSwatch?.colorName)
     }
-    
-    
     
 }

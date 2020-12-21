@@ -7,16 +7,16 @@
 
 import UIKit
 
-//protocol ColorDelegate: AnyObject{
-//    func colorTake(colorSwatch: ColorSwatch)
-//}
+protocol ColorDelegate: AnyObject{
+    func colorTake(colorSwatch: ColorSwatch)
+}
 
 class ColorPickerViewController: UIViewController {
     
     let colorPickerView = UIColorPickerViewController()
     let colorWell = UIColorWell()
     
-//    weak var delegate: ColorDelegate?
+    weak var delegate: ColorDelegate?
     
     @IBOutlet weak var colorNameText: UITextField!
     @IBOutlet weak var colorView: UIView!
@@ -45,6 +45,7 @@ class ColorPickerViewController: UIViewController {
         
         do {
             try dataPersistence.create(item: newColorSwatch, indexPath: 0)
+            delegate?.colorTake(colorSwatch: newColorSwatch)
             print("created swatch")
             dismiss(animated: true)
         } catch {
